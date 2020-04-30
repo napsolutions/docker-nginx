@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "tscluster04302020"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "tscluster04302020"
+    spec:
+      containers:
+        - name: "tscluster04302020"
+          image: "threatstack.azurecr.io/tscluster04302020"
+          ports:
+          - containerPort: 80
